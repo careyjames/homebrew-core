@@ -3,20 +3,19 @@ class Awscurl < Formula
 
   desc "Curl like simplicity to access AWS resources"
   homepage "https://github.com/okigan/awscurl"
-  url "https://files.pythonhosted.org/packages/80/f4/95935ad7041ba008221ce81b698963c8be0c5c97e6fcfd86e0e2009ebacd/awscurl-0.29.tar.gz"
-  sha256 "5e1ecd0ab7b014de697a1e161fa483c2263d16c3e156a81bdc8b9a9c2d0ba3f3"
+  url "https://files.pythonhosted.org/packages/09/5b/98f022bc96ceb68b12fb4cfe6fdf52cc3051fa0b7bf51dc805521afe72bd/awscurl-0.31.tar.gz"
+  sha256 "6ce032543c0ec00857ce9c08cafe8041270b5508b08ec73e264e63f1e1255601"
   license "MIT"
-  revision 5
   head "https://github.com/okigan/awscurl.git", branch: "master"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "d8208f9986bc549def633ccbdd508a2b8c7896ab6c43f699a71df7b6ac8b9743"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1acb92ae8cf43bc0e18c3f686516fd18b6329758d360cfa5f7383027fdb99484"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "ac1d9cfeb64bb41802001dcccb9bbf5fa2eb3151532bdab13be79175be34a824"
-    sha256 cellar: :any_skip_relocation, sonoma:         "329ee56b64364dae0995986c8a33566d5f13e25beb7fc2a7b55258f4dd2dedb4"
-    sha256 cellar: :any_skip_relocation, ventura:        "818fff63a8836eba670acc97204972dfdaa887d065c3124571a77bcbb1fa59d9"
-    sha256 cellar: :any_skip_relocation, monterey:       "4fa1266e18b2b370097d6327a9fe58866e8687300e3dced4f01cdfe12494d33b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d671d041c642c25fb08ae441d92cecb05548c7eaded826fe4155b373e2314a26"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "bf46a701e81a0fc2b4235ba9e29e7cbdc84b51a63de46cf0098e2fd75be37fa6"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "9044374037b12a3efa1484cbdd7211048e85f81fdbc04e3e28c984e5fae97a56"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "5020ff1cdd50cee0bfc0f6bd139f087cc30eb0933ac9c5c0fab21705f99215bc"
+    sha256 cellar: :any_skip_relocation, sonoma:         "c73a83396b87d96d1a0db07b8a716048969d3bdcfea4f5d2a418a5a6f0c1f325"
+    sha256 cellar: :any_skip_relocation, ventura:        "bcdd3d41aae6b1af19190e0c9f13e1e211f79e05165230551e670a69ced25187"
+    sha256 cellar: :any_skip_relocation, monterey:       "9f6515773f5201cdfdd3f744d4265de497fe351bdd732d817a389f46ec99e83d"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f70f0d8c10124e80b736c7cd18dc000d8c78dcb11326eddc424e155cd26d6eb"
   end
 
   depends_on "cffi"
@@ -47,11 +46,6 @@ class Awscurl < Formula
     sha256 "814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4"
   end
 
-  resource "pyopenssl" do
-    url "https://files.pythonhosted.org/packages/be/df/75a6525d8988a89aed2393347e9db27a56cb38a3e864314fac223e905aef/pyOpenSSL-23.2.0.tar.gz"
-    sha256 "276f931f55a452e7dea69c7173e984eb2a4407ce413c918aa34b55f82f9b8bac"
-  end
-
   resource "requests" do
     url "https://files.pythonhosted.org/packages/9d/be/10918a2eac4ae9f02f6cfe6414b7a155ccd8f7f9d4380d62fd5b955065c3/requests-2.31.0.tar.gz"
     sha256 "942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
@@ -60,11 +54,6 @@ class Awscurl < Formula
   resource "urllib3" do
     url "https://files.pythonhosted.org/packages/8b/00/db794bb94bf09cadb4ecd031c4295dd4e3536db4da958e20331d95f1edb7/urllib3-2.0.6.tar.gz"
     sha256 "b19e1a85d206b56d7df1d5e683df4a7725252a964e3993648dd0fb5a1c157564"
-  end
-
-  resource "urllib3-secure-extra" do
-    url "https://files.pythonhosted.org/packages/c9/67/76b7c055ea787729bb9f839a84689ea2f88e217519d59ae547824431ec95/urllib3-secure-extra-0.1.0.tar.gz"
-    sha256 "ee9409cbfeb4b8609047be4c32fb4317870c602767e53fd8a41005ebe6a41dff"
   end
 
   def install
