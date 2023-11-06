@@ -1,13 +1,16 @@
 class DnsScout < Formula
   desc "Pulls and display DNS records"
   homepage "https://github.com/careyjames/DNS-Scout"
-  url "https://github.com/careyjames/DNS-Scout/archive/refs/tags/v5.8.tar.gz"
-  sha256 "32de5bd081bb7f4956867be43fc2f887e073de948a96378040d54a89074a681d"
-  sha256 "22a387feb0966f0e9db51be808358cd88d5bc241a3b3ce8dd02903ca501a94e3"
+  url "https://github.com/careyjames/dns-scout/releases/download/v6.20/dns-scout-macos-arm64-silicon-v6.20.tar.gz"
+  sha256 "4a139c9bb63e146ec523358b765632a80dc1344a4b352778d7995839ebff1638"
   license "MIT"
 
   depends_on "go" => :build
 
+  bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "4a139c9bb63e146ec523358b765632a80dc1344a4b352778d7995839ebff1638"
+  end
+  
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w")
   end
