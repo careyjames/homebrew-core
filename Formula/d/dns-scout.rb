@@ -8,7 +8,7 @@ class DnsScout < Formula
   depends_on "go" => :build
 
   bottle do
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "4a139c9bb63e146ec523358b765632a80dc1344a4b352778d7995839ebff1638"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "4a139c9bb63e146ec523358b765632a80dc1344a4b352778d7995839ebff1638"
   end
   
   def install
